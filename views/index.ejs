@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/" method="POST">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nombre</label>
+        <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+        <p style="color:red"> <%= (locals.errors && errors.name? errors.name.msg : null) %> </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input name="email" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <p style="color:red"> <%= (locals.errors && errors.email? errors.email.msg : null) %> </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Color</label>
+        <select class="form-control" id="exampleFormControlSelect1" name="color">
+          <option value="Rojo">Rojo</option>
+          <option value="Azul">Azul</option>
+          <option value="Amarillo">Amarillo</option>
+        </select>
+        <p style="color:red"> <%= (locals.errors && errors.color? errors.color.msg : null) %> </p>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Edad</label>
+        <input type="age" class="form-control" id="exampleFormControlInput1" placeholder="32">
+        <p style="color:red"> <%= (locals.errors && errors.age? errors.age.msg : null) %> </p>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </body>
+</html>
