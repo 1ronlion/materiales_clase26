@@ -20,6 +20,7 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">Color</label>
         <select class="form-control" id="exampleFormControlSelect1" name="color">
+          <option value="" disabled>Seleccione un color</option>
           <option value="Rojo">Rojo</option>
           <option value="Azul">Azul</option>
           <option value="Amarillo">Amarillo</option>
@@ -28,7 +29,7 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Edad</label>
-        <input type="age" class="form-control" id="exampleFormControlInput1" placeholder="32">
+        <input name="age" type="text" class="form-control" id="exampleFormControlInput1" placeholder="33">
         <p style="color:red"> <%= (locals.errors && errors.age? errors.age.msg : null) %> </p>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>

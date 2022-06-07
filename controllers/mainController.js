@@ -1,5 +1,6 @@
 const {validationResult} = require('express-validator')
 
+
 module.exports = {
 
     index: (req,res) => {
@@ -10,8 +11,12 @@ module.exports = {
 
     store: (req,res) => {
 
-    errors = validationResult(req)
-    console.log("🚀 ~ file: mainController.js ~ line 14 ~ errors", errors)
+    let validationErrors = validationResult(req)
+
+    console.log("🚀 ~ file: mainController.js ~ line 15 ~ validationErrors", validationErrors)
+
+
+        res.redirect("/")
 
     }
 
